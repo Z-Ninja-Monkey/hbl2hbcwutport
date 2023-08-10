@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "Wii U dev",
+            "includePath": [
+                "/opt/devkitpro/wut/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        },
+        {
+            "name": "Linux Regular",
+            "includePath": [
+                "/home/mint/Documents/hbl2hbcport/**"
+            ],
+            "defines": [],
+            "compilerPath": "/opt/devkitpro/wut/include",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPathInCppPropertiesJson": "/opt/devkitpro/wut/include",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
