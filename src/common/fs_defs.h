@@ -2,6 +2,7 @@
 #define	FS_DEFS_H
 
 #include "types.h"
+#include <coreinit/all_headers.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -32,6 +33,7 @@ extern "C" {
 #define FS_CLIENT_SIZE                  0x1700
 #define FS_CMD_BLOCK_SIZE               0xA80
 
+/*
 typedef struct
 {
     uint32_t flag;
@@ -46,6 +48,7 @@ typedef struct
     uint64_t mtime;
     uint8_t attributes[48];
 } __attribute__((packed)) FSStat;
+*/
 
 typedef struct
 {

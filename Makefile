@@ -162,32 +162,92 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named helloworld
+# Target rules for targets named hbl2hbc
 
 # Build rule for target.
-helloworld: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 helloworld
-.PHONY : helloworld
+hbl2hbc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hbl2hbc
+.PHONY : hbl2hbc
 
 # fast build rule for target.
-helloworld/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloworld.dir/build.make CMakeFiles/helloworld.dir/build
-.PHONY : helloworld/fast
+hbl2hbc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/build
+.PHONY : hbl2hbc/fast
+
+# target to build an object file
+src/entry.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/entry.o
+.PHONY : src/entry.o
+
+# target to preprocess a source file
+src/entry.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/entry.i
+.PHONY : src/entry.i
+
+# target to generate assembly for a file
+src/entry.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/entry.s
+.PHONY : src/entry.s
+
+# target to build an object file
+src/fs/fs_utils.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/fs/fs_utils.o
+.PHONY : src/fs/fs_utils.o
+
+# target to preprocess a source file
+src/fs/fs_utils.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/fs/fs_utils.i
+.PHONY : src/fs/fs_utils.i
+
+# target to generate assembly for a file
+src/fs/fs_utils.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/fs/fs_utils.s
+.PHONY : src/fs/fs_utils.s
+
+# target to build an object file
+src/fs/sd_fat_devoptab.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/fs/sd_fat_devoptab.o
+.PHONY : src/fs/sd_fat_devoptab.o
+
+# target to preprocess a source file
+src/fs/sd_fat_devoptab.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/fs/sd_fat_devoptab.i
+.PHONY : src/fs/sd_fat_devoptab.i
+
+# target to generate assembly for a file
+src/fs/sd_fat_devoptab.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/fs/sd_fat_devoptab.s
+.PHONY : src/fs/sd_fat_devoptab.s
 
 # target to build an object file
 src/main.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloworld.dir/build.make CMakeFiles/helloworld.dir/src/main.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/main.o
 .PHONY : src/main.o
 
 # target to preprocess a source file
 src/main.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloworld.dir/build.make CMakeFiles/helloworld.dir/src/main.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/main.i
 .PHONY : src/main.i
 
 # target to generate assembly for a file
 src/main.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloworld.dir/build.make CMakeFiles/helloworld.dir/src/main.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/main.s
 .PHONY : src/main.s
+
+# target to build an object file
+src/system/memory.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/system/memory.o
+.PHONY : src/system/memory.o
+
+# target to preprocess a source file
+src/system/memory.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/system/memory.i
+.PHONY : src/system/memory.i
+
+# target to generate assembly for a file
+src/system/memory.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hbl2hbc.dir/build.make CMakeFiles/hbl2hbc.dir/src/system/memory.s
+.PHONY : src/system/memory.s
 
 # Help Target
 help:
@@ -201,10 +261,22 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... helloworld"
+	@echo "... hbl2hbc"
+	@echo "... src/entry.o"
+	@echo "... src/entry.i"
+	@echo "... src/entry.s"
+	@echo "... src/fs/fs_utils.o"
+	@echo "... src/fs/fs_utils.i"
+	@echo "... src/fs/fs_utils.s"
+	@echo "... src/fs/sd_fat_devoptab.o"
+	@echo "... src/fs/sd_fat_devoptab.i"
+	@echo "... src/fs/sd_fat_devoptab.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/system/memory.o"
+	@echo "... src/system/memory.i"
+	@echo "... src/system/memory.s"
 .PHONY : help
 
 
